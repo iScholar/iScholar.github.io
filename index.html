@@ -2,42 +2,42 @@
 <head>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
-google.load("visualization", "2", {packages:["corechart"]});
+google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawSeriesChart);
 function drawSeriesChart() {
 var data = google.visualization.arrayToDataTable([
 //NB: The chart demands all fields--one can't delete a field
 
-['Author','Publication.Year','Citations','Publication.Title','Clickthrough.Rate'],
-["Seo, Dong-ho",2012,33,"High-yield enzymatic bioconversion of hydroquinone to [alpha]-arbutin, a powerful skin lightening agent, by amylosucrase", 5],
-["Xiong, Xiaolong",2012,5,"Retrieval of glycoside hydrolase family 9 cellulase genes from environmental DNA by metagenomic gene specific multi-primer PCR", 8],
-["Feng, Zhiyang",2012,15,"Biocatalysts and small molecule products from metagenomic studies",9],
-["Mori, Tetsuya",2008,7,"Purification and characterization of cyclic maltosyl-(1--&gt;6)-maltose hydrolase and alpha-glucosidase from an Arthrobacter globiformis strain", 7],
-["Wu, Po-Hung",2006,8,"Surface display of transglucosidase on Escherichia coli by using the ice nucleation protein of Xanthomonas campestris and its application in glucosylation of hydroquinone", 3],
-["Sugimoto, Kazuhisa",2005,45,"Syntheses of alpha-Arbutin-alpha-Glycosides and Their Inhibitory Effects on Human Tyrosinase", 5],
-["Wu, Po-Hung",2000,21,"alpha -Anomer-selective glucosylation of (+)-catechin by the crude enzyme, showing glucosyl transfer activity, of Xanthomonas campestris WU-9701", 3],
-["Mori, Tetsuya",1991,16,"Characterization of a neopullulanase and an alpha -glucosidase from Bacteroides thetaiotaomicron 95-1", 7],
-["Kumar, Abhinendra",2014,27,"Homogeneity of VacJ outer membrane lipoproteins amongPasteurella multocidastrains and heterogeneity among members of Pasteurellaceae", 7],
-["Salah A; Haroun",2014,82,"Homogeneity of VacJ outer membrane lipoproteins amongPasteurella multocidastrains and heterogeneity among members of Pasteurellaceae", 9],
-["Kumar, Abhinendra",2014,6,"Immunogenicity of highly conserved recombinant VacJ outer membrane lipoprotein of Pasteurella multocida", 7],
-["Ramakrishnan, Muthannan A",2013,28,"Structural analysis and cross-protective efficacy of recombinant 87 kDa outer membrane protein (Omp87) of Pasteurella multocida serogroup B:2", 4],
-["Kumar, Abhinendra",2013,48,"Carboxyl terminus heterogeneity of type IV fimbrial subunit protein of Pasteurella multocida isolates", 2],
-["Snyder, Joy",2013,67,"Dual orientation of the outer membrane lipoprotein P6 of nontypeable haemophilus influenzae", 3],
-["Sathish B; Yogisharadhya",2012,24,"Expression and purification of recombinant type IV fimbrial subunit protein of Pasteurella multocida serogroup B:2 in Escherichia coli", 5],
-["Herzyk, Pawel",2012,19,"Predicting the outer membrane proteome of Pasteurella multocida based on consensus prediction enhanced by results integration and manual confirmation", 5],
-["Gong, Lan",2012,34,"Screening of 71 P. multocida proteins for protective efficacy in a fowl cholera infection model and characterization of the protective antigen PlpE", 3],
-["Shivachandra, S B",2011,27,"A review of hemorrhagic septicemia in cattle and buffalo", 9],
-["Chang, Arthur",2011,48,"Haemophilus influenzae vaccine candidate outer membrane protein P6 is not conserved in all strains", 7],
-["Chang, Arthur",2011,5,"Lipoproteins of bacterial pathogens", 2],
-["Boyce, John D",2010,12,"Outer membrane proteins of Pasteurella multocida", 4]
+['Record.ID','Publication.Year','Citations','Publication.Title','Clickthrough.Rate'],
+["",1992,33,"Seo, Dong-ho", 5],
+["",1993,5,"Xiong, Xiaolong", 8],
+["",1995,15,"Feng, Zhiyang",9],
+["",1997,7,"Mori, Tetsuya", 7],
+["",2006,8,"Wu, Po-Hung", 3],
+["",2005,45,"Sugimoto, Kazuhisa", 5],
+["",2000,21,"Wu, Po-Hung", 3],
+["",1991,16,"Mori, Tetsuya", 7],
+["",2014,27,"Kumar, Abhinendra", 7],
+["",2001,82,"Salah A; Haroun", 9],
+["",1999,6,"Kumar, Abhinendra", 7],
+["",2013,28,"Ramakrishnan, Muthannan A", 4],
+["",2013,48,"Kumar, Abhinendra", 2],
+["",2013,67,"Snyder, Joy", 3],
+["",2012,24,"Sathish B; Yogisharadhya", 5],
+["",2012,19,"Herzyk, Pawel", 5],
+["",2012,34,"Gong, Lan", 3],
+["",2011,27,"Shivachandra, S B", 9],
+["",2011,48,"Chang, Arthur", 7],
+["",2011,5,"Chang, Arthur", 2],
+["",2010,12,"Boyce, John D", 4]
 
 ]);
 
 var options = {
-        title: 'Prominence of Scholarship within the Field of Enzyme Extraction',
+        title: 'Leading Scholars within the Field of Enzyme Extraction',
         hAxis: {title: 'Publication Year'},
         vAxis: {title: 'Times Record is Cited'},
-        bubble: {textStyle: {fontSize: 10}}
+        bubble: {textStyle: {fontSize: 11}}
       };
 	  
 
