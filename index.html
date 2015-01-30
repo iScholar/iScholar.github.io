@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawSeriesChart);
+function drawSeriesChart() {
+var data = google.visualization.arrayToDataTable([
+//NB: The chart demands all fields--one can't delete a field
+
+['Record.ID','Year','Citations','Metadata','Traffic'],
+["1",2012,33,"High-yield enzymatic bioconversion of hydroquinone to [alpha]-arbutin, a powerful skin lightening agent, by amylosucrase -- Seo, Dong-ho; Jung, Jong-hyun; Ha, Suk-jin; Cho, Hyun-kug; Jung, Dong-hyun; et al.", 5],
+["2",2012,5,"Retrieval of glycoside hydrolase family 9 cellulase genes from environmental DNA by metagenomic gene specific multi-primer PCR.-- Xiong, Xiaolong; Yin, Xiaopu; Pei, Xiaolin; Jin, Peng; Zhang, Ao; et al.", 8],
+["3",2012,15,"Biocatalysts and small molecule products from metagenomic studies. -- Iqbal, Hala A; Feng, Zhiyang; Brady, Sean F; National Library of Medicine.",9],
+["4",2008,7,"Purification and characterization of cyclic maltosyl-(1--&gt;6)-maltose hydrolase and alpha-glucosidase from an Arthrobacter globiformis strain.-- Mori, Tetsuya; Nishimoto, Tomoyuki; Okura, Takanori; Chaen, Hiroto; Fukuda, Shigeharu; et al.", 7],
+["5",2006,8,"Surface display of transglucosidase on Escherichia coli by using the ice nucleation protein of Xanthomonas campestris and its application in glucosylation of hydroquinone -- Wu, Po-Hung; Giridhar, R; Wu, Wen-Teng.", 3],
+["6",2005,45,"Syntheses of alpha-Arbutin-alpha-Glycosides and Their Inhibitory Effects on Human Tyrosinase -- Sugimoto, Kazuhisa; Nomura, Koji; Nishimura, Takahisa; Kiso, Taro; Sugimoto, Kenji; et al.", 5],
+["7",2000,21,"alpha -Anomer-selective glucosylation of (+)-catechin by the crude enzyme, showing glucosyl transfer activity, of Xanthomonas campestris WU-9701 -- Sato, Toshiyuki; Nakagawa, Hiroyuki; Kurosu, Jun; Yoshida, Keishiro; Tsugane, Takanori; et al.", 3],
+["8",1991,16,"Characterization of a neopullulanase and an alpha -glucosidase from Bacteroides thetaiotaomicron 95-1. -- Smith, KA; Salyers, A A.", 7],
+["9",2014,27,"Homogeneity of VacJ outer membrane lipoproteins amongPasteurella multocidastrains and heterogeneity among members of Pasteurellaceae -- Shivachandra, Sathish Bhadravati; Kumar, Abhinendra; Mohanty, Nihar Nalini; Yogisharadhya, Revan aiah; Chacko, Nirmal; et al.", 7],
+["10",2014,82,"Homogeneity of VacJ outer membrane lipoproteins amongPasteurella multocidastrains and heterogeneity among members of Pasteurellaceae -- Ahmad, Tarek A; Rammah, Samar S; Sheweita, Salah A; Haroun, Medhat; El-Sayed, Laila H; et al.", 9],
+["11",2014,6,"Immunogenicity of highly conserved recombinant VacJ outer membrane lipoprotein of Pasteurella multocida. -- hivachandra, Sathish Bhadravati; Kumar, Abhinendra; Yogisharadhya, Revanaiah; Viswas, K N; National Library of Medicine.", 7],
+["12",2013,28,"Structural analysis and cross-protective efficacy of recombinant 87 kDa outer membrane protein (Omp87) of Pasteurella multocida serogroup B:2. -- Kumar, Abhinendra; Yogisharadhya, Revanaiah; Ramakrishnan, Muthannan A; Viswas, K N; Shivachandra, Sathish B; et al.", 4],
+["13",2013,48,"Carboxyl terminus heterogeneity of type IV fimbrial subunit protein of Pasteurella multocida isolates -- Shivachandra, Sathish Bhadravati; Kumar, Abhinendra; Yogisharadhya, Revanaiah; Ramakrishnan, M A; Viswas, K N.", 2],
+["14",2013,67,"Dual orientation of the outer membrane lipoprotein P6 of nontypeable haemophilus influenzae. -- Michel, Lea Vacca; Snyder, Joy; Schmidt, Rachel; Milillo, Jennifer; Grimaldi, Kyle; et al.", 3],
+["15",2012,24,"Expression and purification of recombinant type IV fimbrial subunit protein of Pasteurella multocida serogroup B:2 in Escherichia coli. -- Shivachandra, Sathish B; Yogisharadhya, Revanaiah; Ahuja, Anuj; Bhanuprakash, Veerakyathappa; National Library of Medicine.", 5],
+["16",2012,19,"Predicting the outer membrane proteome of Pasteurella multocida based on consensus prediction enhanced by results integration and manual confirmation. -- E-komon, Teerasak; Burchmore, Richard; Herzyk, Pawel; Davies, Robert; National Library of Medicine.", 5],
+["17",2012,34,"Screening of 71 P. multocida proteins for protective efficacy in a fowl cholera infection model and characterization of the protective antigen PlpE. -- Hatfaludi, Tam­s; Al-Hasani, Keith; Gong, Lan; Boyce, John D; Ford, Mark; et al.", 3],
+["18",2011,27,"A review of hemorrhagic septicemia in cattle and buffalo -- Shivachandra, S B; Viswas, K N; Kumar, A A.", 9],
+["19",2011,48,"Haemophilus influenzae vaccine candidate outer membrane protein P6 is not conserved in all strains. -- Chang, Arthur; Kaur, Ravinder; Michel, Lea Vacca; Casey, Janet R; Pichichero, Michael; et al.", 7],
+["20",2011,5,"Lipoproteins of bacterial pathogens. -- Kovacs-Simon, A; Titball, R W; Michell, S L; National Library of Medicine.", 2],
+["21",2010,12,"Outer membrane proteins of Pasteurella multocida. -- Hatfaludi, Tam?­s; Al-Hasani, Keith; Boyce, John D; Adler, Ben; National Library of Medicine.", 4]
+
+]);
+
+var options = {
+        title: 'Prominence of Scholarship within the Field',
+        hAxis: {title: 'Publication Year'},
+        vAxis: {title: 'Times Record is Cited'},
+        bubble: {textStyle: {fontSize: 11}}
+      };
+	  
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+	  
+	  google.visualization.events.addListener(chart, 'select',gvisListenerBubbleChart);
+    function gvisListenerBubbleChart() {
+	//window.open('http://en.wikipedia.org/wiki/'+data.getValue(chart.getSelection()[0].row,0));
+    window.open('http://en.wikipedia.org/wiki/Sergei_Rachmaninoff');
+	}
+
+}
+    </script>
+  </head>
+  <body>
+    <div id="series_chart_div" style="width: 1100px; height: 700px;"></div>
+  </body>
+</html>
